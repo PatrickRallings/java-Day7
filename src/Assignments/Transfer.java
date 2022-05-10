@@ -12,8 +12,12 @@ public class Transfer {
         this.amount = amount;
     }
     public void send(){
-        this.sender.setBalanceWithdrawal(this.amount);
-        this.receiver.setBalanceDeposit(this.amount);
-        this.transferComplete = true;
+        if (this.sender.balance > this.amount) {
+            this.sender.setBalanceWithdrawal(this.amount);
+            this.receiver.setBalanceDeposit(this.amount);
+            this.transferComplete = true;
+        } else{
+            System.out.println(this.sender + " balance does not meet the requirements of this transaction.");
+        }
     }
 }
