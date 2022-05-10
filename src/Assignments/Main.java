@@ -1,6 +1,7 @@
 package Assignments;
 
 public class Main {
+
     public static void main(String[] args) {
         //Bank Account Assignment
         BankAccount PatrickR = new BankAccount("Patrick Rallings", 500);
@@ -16,8 +17,8 @@ public class Main {
     public static void bankTransfer() {
         BankAccount Matt = new BankAccount("Matt", 5000);
         BankAccount Tim = new BankAccount("Tim", 300);
-        Matt.setBalanceWithdrawal(100);
-        Tim.setBalanceDeposit(100);
+        Transfer id1 = new Transfer(Matt, Tim, 100);
+        id1.send();
         Matt.getAccount();
         Tim.getAccount();
     }

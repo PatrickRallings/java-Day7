@@ -15,7 +15,7 @@ public class Product {
     }
     public void totalCost() {
         double totalCost = this.cost * this.quantity;
-        System.out.println("The total cost of $"+this.quantity+" units is "+f.format(totalCost));
+        System.out.println("The total cost of "+this.quantity+" unit(s) is $"+f.format(totalCost));
     }
     public void printProduct() {
         System.out.println("Each unit of "+this.name+" costs $"+f.format(this.cost)+" and "+this.quantity+" units were purchases.");
