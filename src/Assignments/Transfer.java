@@ -4,7 +4,7 @@ public class Transfer {
     BankAccount sender;
     BankAccount receiver;
     Double amount;
-    boolean transferComplete = false;
+    boolean transferCompleted = false;
 
     public Transfer(BankAccount sender,BankAccount receiver,double amount) {
         this.sender = sender;
@@ -15,7 +15,7 @@ public class Transfer {
         if (this.sender.balance > this.amount) {
             this.sender.setBalanceWithdrawal(this.amount);
             this.receiver.setBalanceDeposit(this.amount);
-            this.transferComplete = true;
+            this.transferCompleted = true;
         } else{
             System.out.println(this.sender + " balance does not meet the requirements of this transaction.");
         }
